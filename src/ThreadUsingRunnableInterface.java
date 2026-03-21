@@ -18,7 +18,7 @@ class Thread2 implements Runnable {
     }
 }
 
-public class ThreadUsingRunableInterface {
+public class ThreadUsingRunnableInterface {
     public static void main(String[] args) {
         // Creating an instance of the Thread1 class, which implements the Runnable interface.
         Thread1 wheel1 = new Thread1();
