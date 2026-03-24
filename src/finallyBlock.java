@@ -1,4 +1,3 @@
-
 public class finallyBlock {
     public static int check() {
         try {
