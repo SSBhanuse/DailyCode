@@ -21,7 +21,7 @@ public class hashSetTry {
         System.out.println(date.getTime()); //getTime() method is used to get the time in milliseconds since January 1, 1970, 00:00:00 GMT
 
         Calendar cal = Calendar.getInstance(); //getInstance() method is used to get a calendar object that is initialized with the current date and time
-        System.out.println(cal);
-        System.out.println(cal.getTimeZone().getID());
+        System.out.println(cal); //Calendar class does not have a toString() method, so it will print the memory address of the object
+        System.out.println(cal.getTimeZone().getID()); //getTimeZone() method is used to get the time zone of the calendar, and getID() method is used to get the ID of the time zone
     }
 }
