@@ -1,6 +1,7 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -25,5 +26,13 @@ public class dateTime {
 
         LocalDateTime localDateTime = LocalDateTime.now(); //now() method is used to get the current date and time
         System.out.println(localDateTime); //toString() method is used to get the string representation of the localDateTime object, it will return the date and time in the format of YYYY
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"); //ofPattern() method is used to create a formatter with the specified pattern
+        String formattedDateTime = localDateTime.format(formatter); //format() method is used to format the localDateTime object using the specified formatter
+        System.out.println(formattedDateTime); //it will return the date and time in the format of dd/MM/yyyy HH:mm:ss
+
+        DateTimeFormatter formatter2 = DateTimeFormatter.ISO_DATE_TIME; //ISO_DATE_TIME is a predefined formatter that formats the date and time in the ISO 8601 format
+        String formattedDateTime2 = localDateTime.format(formatter2); //format() method is used to format the localDateTime object using the specified formatter
+        System.out.println(formattedDateTime2); //it will return the date and time in the format of YYYY-MM-DDTHH:MM:SS
     }
 }
